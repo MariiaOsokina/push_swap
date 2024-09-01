@@ -1,14 +1,23 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   oper_re_rotate.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/26 13:13:08 by mosokina          #+#    #+#             */
+/*   Updated: 2024/08/26 13:13:08 by mosokina         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../push_swap.h"
 
 /*REVERSE ROTATE FUNCTION*/
 static void	ft_reverse_rotate(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	t_stack	*prev_stack;
 
-	// /*Do nothing if there is only one or no elements.*/
-	// if (!(*stack) || !(*stack)->next)
-	// 	return ;
 	prev_stack = ft_prevstack(*stack);
 	tmp = *stack;
 	*stack = prev_stack->next;

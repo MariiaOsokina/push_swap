@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 09:47:39 by mosokina          #+#    #+#             */
-/*   Updated: 2024/05/01 09:47:55 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:45 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static size_t	ft_strlen(const char *s)
 {

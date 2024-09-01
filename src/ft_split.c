@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 09:49:25 by mosokina          #+#    #+#             */
-/*   Updated: 2024/05/01 09:49:42 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:59:47 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+
+#include "../push_swap.h"
 
 static size_t	count_words(char const *s, char c)
 {

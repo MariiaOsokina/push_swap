@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:31:53 by mosokina          #+#    #+#             */
-/*   Updated: 2024/06/17 13:31:55 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:45 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_b;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc == 1)		
+	if (argc == 1)
 		return (0);
 	ft_parse(argc, argv, &stack_a, &stack_b);
 	if (ft_check_dup(stack_a) == 1)
@@ -45,10 +45,6 @@ void	ft_big_sort(t_stack **stack_a, t_stack **stack_b)
 		ft_sort_three(stack_a);
 	ft_from_b_to_a(stack_a, stack_b);
 	ft_min_a_to_top(stack_a);
-	// printf("stack a:\n");
-	// ft_print_stack(*stack_a);
-	// printf("stack b:\n");
-	// ft_print_stack(*stack_b);
 }
 
 void	ft_sort_three(t_stack **stack_a)
@@ -75,7 +71,7 @@ void	ft_sort_three(t_stack **stack_a)
 
 void	ft_min_a_to_top(t_stack **stack_a)
 {
-	int ind_min_a;
+	int	ind_min_a;
 
 	ind_min_a = ft_find_index(*stack_a, ft_min_stack(*stack_a));
 	if (ind_min_a < ft_stk_size(*stack_a) - ind_min_a)

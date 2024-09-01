@@ -1,4 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   apply_best_oper_2.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/26 12:58:41 by mosokina          #+#    #+#             */
+/*   Updated: 2024/08/26 12:58:41 by mosokina         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../push_swap.h"
 
 void	ft_apply_ra_rb(t_stack **stk_a, t_stack **stk_b, int ind_a, int ind_b)
 {
@@ -22,20 +34,20 @@ void	ft_apply_ra_rb(t_stack **stk_a, t_stack **stk_b, int ind_a, int ind_b)
 	ft_pb(stk_a, stk_b, 0);
 }
 
-void	ft_apply_rra_rrb(t_stack **s_a, t_stack **s_b, int ind_a, int ind_b)
+void	ft_apply_rra_rrb(t_stack **s_a, t_stack **s_b, int ix_a, int ix_b)
 {
-	int c_rrr;
+	int	c_rrr;
 
 	c_rrr = 0;
-	if (ind_a != 0 && ind_b != 0)
-		c_rrr = ft_min((ft_stk_size(*s_a) - ind_a), (ft_stk_size(*s_b) - ind_b));
-	ft_choose_rra_rrb(s_a, s_b, ind_a, ind_b);
+	if (ix_a != 0 && ix_b != 0)
+		c_rrr = ft_min((ft_stk_size(*s_a) - ix_a), (ft_stk_size(*s_b) - ix_b));
+	ft_choose_rra_rrb(s_a, s_b, ix_a, ix_b);
 	while (c_rrr--)
 		ft_rrr(s_a, s_b, 0);
 	ft_pb(s_a, s_b, 0);
 }
 
-void ft_choose_rra_rrb(t_stack **s_a, t_stack **s_b, int ind_a, int ind_b)
+void	ft_choose_rra_rrb(t_stack **s_a, t_stack **s_b, int ind_a, int ind_b)
 {
 	int	c_rra;
 	int	c_rrb;

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_from_a_to_b.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 19:52:27 by mosokina          #+#    #+#             */
-/*   Updated: 2024/07/21 19:52:36 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:45 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_from_a_to_b(t_stack **stack_a, t_stack **stack_b)
 {
@@ -28,7 +28,7 @@ int	ft_best_total_result(t_stack *stack_a, t_stack *stack_b, int *best_nbr)
 	int		best_nbr_res;
 	int		nbr_a;
 	t_stack	*tmp_stack;
-	int 	top_b;
+	int		top_b;
 
 	tmp_stack = stack_a;
 	top_b = ft_find_top_b(stack_b, *best_nbr);

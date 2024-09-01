@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   oper_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 10:43:20 by mosokina          #+#    #+#             */
-/*   Updated: 2024/07/12 10:43:22 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:45 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 /*FUCTION SWAP*/
 static void	ft_swap(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	tmp = *stack;
-	*stack = (*stack) ->next;
+	*stack = (*stack)->next;
 	tmp->next = (*stack)->next;
 	(*stack)->next = tmp;
 }

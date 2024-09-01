@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   best_nbr_result.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 19:04:03 by mosokina          #+#    #+#             */
-/*   Updated: 2024/07/21 19:48:27 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:06 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_best_nbr_result(t_stack *stack_a, t_stack *stack_b, int nb_a, int nb_b)
+int	ft_best_nbr_result(t_stack *stk_a, t_stack *stk_b, int nb_a, int nb_b)
 {
 	int	ind_a;
 	int	ind_b;
 	int	best_nbr_res;
 
-	ind_a = ft_find_index(stack_a, nb_a);
-	ind_b = ft_find_index(stack_b, nb_b);
+	ind_a = ft_find_index(stk_a, nb_a);
+	ind_b = ft_find_index(stk_b, nb_b);
 	if (ind_a == 0 && ind_b == 0)
 		return (1);
 	best_nbr_res = ft_count_ra_rb(ind_a, ind_b);
-	if (best_nbr_res > ft_count_rra_rrb(stack_a, stack_b, ind_a, ind_b))
-		best_nbr_res = ft_count_rra_rrb(stack_a, stack_b, ind_a, ind_b);
-	if (best_nbr_res > ft_count_ra_rrb(stack_b, ind_a, ind_b))
-		best_nbr_res = ft_count_ra_rrb(stack_b, ind_a, ind_b);
-	if (best_nbr_res > ft_count_rb_rra(stack_a, ind_a, ind_b))
-		best_nbr_res = ft_count_rb_rra(stack_a, ind_a, ind_b);
+	if (best_nbr_res > ft_count_rra_rrb(stk_a, stk_b, ind_a, ind_b))
+		best_nbr_res = ft_count_rra_rrb(stk_a, stk_b, ind_a, ind_b);
+	if (best_nbr_res > ft_count_ra_rrb(stk_b, ind_a, ind_b))
+		best_nbr_res = ft_count_ra_rrb(stk_b, ind_a, ind_b);
+	if (best_nbr_res > ft_count_rb_rra(stk_a, ind_a, ind_b))
+		best_nbr_res = ft_count_rb_rra(stk_a, ind_a, ind_b);
 	return (best_nbr_res);
 }
 

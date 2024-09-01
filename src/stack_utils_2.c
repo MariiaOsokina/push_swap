@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils2.c                                     :+:      :+:    :+:   */
+/*   stack_utils_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:17 by mosokina          #+#    #+#             */
-/*   Updated: 2024/07/19 13:57:19 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:45 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_stack	*ft_stack_new(int nbr)
 {
@@ -57,12 +57,3 @@ void	ft_clean_stack(t_stack	**stack)
 	free(*stack);
 	*stack = NULL;
 }
-
-// void	ft_print_stack(t_stack *stack)
-// {
-// 	while (stack != NULL)
-// 	{
-// 		printf("%d\n", stack->nbr);
-// 		stack = stack->next;
-// 	}
-// }

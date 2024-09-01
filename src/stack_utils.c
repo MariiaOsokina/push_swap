@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:09:27 by mosokina          #+#    #+#             */
-/*   Updated: 2024/07/19 13:54:26 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/26 16:53:45 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_stk_size(t_stack *stack)
 {
@@ -61,7 +61,7 @@ int	ft_find_index(t_stack *stack, int nbr)
 	while (stack)
 	{
 		if (stack->nbr == nbr)
-			return (count) ;
+			return (count);
 		stack = stack->next;
 		count ++;
 	}
@@ -71,9 +71,10 @@ int	ft_find_index(t_stack *stack, int nbr)
 int	ft_is_sorted(t_stack	*stack)
 {
 	t_stack	*tmp;
+
 	if (!stack)
 		return (0);
-	while (stack->next !=NULL)
+	while (stack->next != NULL)
 	{
 		tmp = stack;
 		stack = stack->next;

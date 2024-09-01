@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mosokina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mosokina <mosokina@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:49:14 by mosokina          #+#    #+#             */
-/*   Updated: 2024/07/19 13:49:17 by mosokina         ###   ########.fr       */
+/*   Updated: 2024/08/29 12:02:15 by mosokina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	ft_isdigit(int c)
 {
@@ -23,7 +23,6 @@ void	ft_parse(int argc, char **argv, t_stack **stack_a, t_stack **stack_b)
 	int		j;
 
 	i = 1;
-
 	if (argc == 2)
 		ft_parse_quoted(argv, stack_a, stack_b);
 	else
@@ -38,7 +37,7 @@ void	ft_parse(int argc, char **argv, t_stack **stack_a, t_stack **stack_b)
 	return ;
 }
 
-t_stack	*ft_parse_quoted(char **argv, t_stack **stack_a, t_stack **stack_b)
+void	ft_parse_quoted(char **argv, t_stack **stack_a, t_stack **stack_b)
 {
 	char	**tmp_arr;
 	int		i;
@@ -76,10 +75,11 @@ int	ft_atoi2(char *str, t_stack **stack_a, t_stack **stack_b)
 		if (!ft_isdigit(*str))
 			ft_error(stack_a, stack_b);
 		nbr = (nbr * 10) + (*str - '0');
+		if ((nbr * sign) > 2147483647 || (nbr * sign) < -2147483648)
+			ft_error(stack_a, stack_b);
 		str ++;
 	}
-	if ((nbr * sign) > 2147483647 || (nbr * sign) < -2147483648)
-		ft_error(stack_a, stack_b);
+
 	return (nbr * sign);
 }
 
